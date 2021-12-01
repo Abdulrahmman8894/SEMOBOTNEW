@@ -71,7 +71,7 @@ async def play(c: Client, m: Message):
     a = await c.get_chat_member(chat_id, aing.id)
     if a.status != "administrator":
         await m.reply_text(
-            f"💡 To use me, I need to be an **Administrator** with the following **permissions**:\n\n» ❌ __Delete messages__\n» ❌ __Add users__\n» ❌ __Manage video chat__\n\nData is **updated** automatically after you **promote me**"
+            f" قم برفعي مشرف كامل ومتقلقش❤️ **Administrator** with the following **permissions**:\n\n» ❌ __Delete messages__\n» ❌ __Add users__\n» ❌ __Manage video chat__\n\nData is **updated** automatically after you **promote me**"
         )
         return
     if not a.can_manage_voice_chats:
@@ -214,7 +214,7 @@ async def play(c: Client, m: Message):
     else:
         if len(m.command) < 2:
             await m.reply(
-                "» reply to an **audio file** or **give something to search.**"
+                "𖤍 قم بي الرد علي الاغنيه **او قم** بي البحث **عن طريق رابط الاغنيه او اسمها𖤍**"
             )
         else:
             suhu = await c.send_message(chat_id, "🔎 **جاري البحث...**")
@@ -286,7 +286,7 @@ async def stream(c: Client, m: Message):
     a = await c.get_chat_member(chat_id, aing.id)
     if a.status != "administrator":
         await m.reply_text(
-            f"💡 To use me, I need to be an **Administrator** with the following **permissions**:\n\n» ❌ __Delete messages__\n» ❌ __Add users__\n» ❌ __Manage video chat__\n\nData is **updated** automatically after you **promote me**"
+            f"قم برفعي مشرف كامل لتشغيل♬ **Administrator** with the following **permissions**:\n\n» ❌ __Delete messages__\n» ❌ __Add users__\n» ❌ __Manage video chat__\n\nData is **updated** automatically after you **promote me**"
         )
         return
     if not a.can_manage_voice_chats:
@@ -355,7 +355,7 @@ async def stream(c: Client, m: Message):
                 requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                 await m.reply_photo(
                     photo=f"{IMG_1}",
-                    caption=f"💡 **تم اضافه الاغنيه في قائمه الانتظار »** `{pos}`\n\n💭 **Chat:** `{chat_id}`\n🎧 **Request by:** {requester}",
+                    caption=f"💡 **تم اضافه الاغنيه في قائمه الانتظار »** `{pos}`\n\n💭 **المجموعه:** `{chat_id}`\n🎧 **مطلوبه من:** {requester}",
                     reply_markup=keyboard,
                 )
             else:
