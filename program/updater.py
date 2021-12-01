@@ -53,10 +53,10 @@ def updater():
 @sudo_users_only
 async def update_repo(_, message: Message):
     chat_id = message.chat.id
-    msg = await message.reply("🔄 `processing update...`")
+    msg = await message.reply("🔄 `تحديث المعالجة...`")
     update_avail = updater()
     if update_avail:
-        await msg.edit("✅ update finished\n\n• bot restarted, back active again in 1 minutes.")
+        await msg.edit("✅ انتهى التحديث\n\n• أعيد تشغيل الروبوت ، وعاد نشطًا مرة أخرى خلال دقيقة واحدة.")
         system("git pull -f && pip3 install -r requirements.txt")
         execle(sys.executable, sys.executable, "main.py", environ)
         return
@@ -68,6 +68,6 @@ async def update_repo(_, message: Message):
 async def restart_bot(_, message: Message):
     msg = await message.reply("`restarting bot...`")
     args = [sys.executable, "main.py"]
-    await msg.edit("✅ bot restarted\n\n• now you can use this bot again.")
+    await msg.edit("✅ إعادة تشغيل البوت\n\n الآن يمكنك استخدام هذا الروبوت مرة أخرى.")
     execle(sys.executable, *args, environ)
     return
