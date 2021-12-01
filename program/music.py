@@ -50,15 +50,15 @@ async def ytdl(link):
         return 0, stderr.decode()
 
 
-@Client.on_message(command(["mplay", f"mplay@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["mplay", "سيمو", "بوده", "شغل", "play" f"mplay@{BOT_USERNAME}"]) & other_filters)
 async def play(c: Client, m: Message):
     replied = m.reply_to_message
     chat_id = m.chat.id
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(text="• Mᴇɴᴜ", callback_data="cbmenu"),
-                InlineKeyboardButton(text="• Cʟᴏsᴇ", callback_data="cls"),
+                InlineKeyboardButton(text="• 𖤐قـائمه التحكم في التشغيل𖤐", callback_data="cbmenu"),
+                InlineKeyboardButton(text="• 𖤐الــغــاء𖤐", callback_data="cls"),
             ]
         ]
     )
