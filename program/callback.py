@@ -17,11 +17,12 @@ from config import (
 async def cbstart(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""𖤐 **اهـــلا [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**\n
-𖤐 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) allows you to play music and video on groups through the new Telegram's video chats!**
+𖤐 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) 
+𖤐 [{BOT_NAME}](https://t.me/{BOT_USERNAME}) **هذا بوت تشغيل الموسيقى والفيديو في مجموعات من خلال محادثات الفيديو الجديدة في التلجيرام!**
 
-𖤐 **Find out all the Bot's commands and how they work by clicking on the » 📚 Commands button!**
+𖤐 **هذا بوت تشغيل الموسيقى والفيديو في مجموعات من خلال محادثات الفيديو الجديدة في التلجيرام!**
 
-𖤐 **To know how to use this bot, please click on the » ❓ Basic Guide button!**""",
+𖤐 **لمعرفة كيفية استخدام هذا الروبوت ، الرجاء النقر فوق الزر  الدليل الأساسي!**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -176,7 +177,7 @@ async def cbmenu(_, query: CallbackQuery):
     chat_id = query.message.chat.id
     if chat_id in QUEUE:
           await query.edit_message_text(
-              f"⚙️ **الاعدادت** {query.message.chat.title}\n\n⏸ : اياف الموسيقي\n▶️ : اعاده تشغيل الموسيقي\n🔇 : لكتم البوت\n🔊 : فك كتم البوت\n⏹ : اياف الاغنيه",
+              f"⚙️ **الاعدادت** {query.message.chat.title}\n\n⏸ : ايقاف الموسيقي\n▶️ : اعاده تشغيل الموسيقي\n🔇 : لكتم البوت\n🔊 : فك كتم البوت\n⏹ : اياف الاغنيه",
               reply_markup=InlineKeyboardMarkup(
                   [[
                       InlineKeyboardButton("⏹", callback_data="cbstop"),
