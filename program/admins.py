@@ -15,12 +15,12 @@ from pyrogram.types import (
 
 
 bttn = InlineKeyboardMarkup(
-    [[InlineKeyboardButton("🔙 Go Back", callback_data="cbmenu")]]
+    [[InlineKeyboardButton("🔙 رجوع", callback_data="cbmenu")]]
 )
 
 
 bcl = InlineKeyboardMarkup(
-    [[InlineKeyboardButton("🗑 Close", callback_data="cls")]]
+    [[InlineKeyboardButton("🗑 الغاء", callback_data="cls")]]
 )
 
 
@@ -46,10 +46,10 @@ async def skip(client, m: Message):
         [
             [
                 InlineKeyboardButton(
-                    text="• Mᴇɴᴜ", callback_data="cbmenu"
+                    text="• لتحكم في الموسقي", callback_data="cbmenu"
                 ),
                 InlineKeyboardButton(
-                    text="• Cʟᴏsᴇ", callback_data="cls"
+                    text="• الغاء", callback_data="cls"
                 ),
             ]
         ]
@@ -134,12 +134,12 @@ async def resume(client, m: Message):
         try:
             await call_py.resume_stream(chat_id)
             await m.reply(
-                "▶️ **Track resumed.**\n\n• **To pause the stream, use the**\n» /pause command."
+                "▶️ **بدا التشغيل.**\n\n• **To pause the stream, use the**\n» /pause command."
             )
         except Exception as e:
-            await m.reply(f"🚫 **error:**\n\n`{e}`")
+            await m.reply(f"🚫 **خطا:**\n\n`{e}`")
     else:
-        await m.reply("❌ **nothing in streaming**")
+        await m.reply("❌ **لم يوجد شيئ للتشغيل**")
 
 
 @Client.on_message(
