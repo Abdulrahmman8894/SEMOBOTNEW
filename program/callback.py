@@ -45,7 +45,7 @@ async def cbstart(_, query: CallbackQuery):
                 ],
                 [
                     InlineKeyboardButton(
-                        "🌐 Source Code", url="https://github.com/levina-lab/video-stream"
+                        "🌐 Source Code", url="https://t.me/S_E_M_O_E_L_K_B_E_R"
                     )
                 ],
             ]
@@ -80,20 +80,20 @@ async def cbguides(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbcmds"))
 async def cbcmds(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""✨ **Hello [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**
+        f"""𖤐 **اهــلا [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**
 
-» **press the button below to read the explanation and see the list of available commands !**
+» **نـــورت اخـي قـــائمــه الاومـــر تـــابع فـي الاسفل !**
 
-⚡ __Powered by {BOT_NAME} A.I__""",
+⚡ __مـــدعـــوم مــن {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("👷🏻 Admin Cmd", callback_data="cbadmin"),
-                    InlineKeyboardButton("🧙🏻 Sudo Cmd", callback_data="cbsudo"),
+                    InlineKeyboardButton("𖤐القائمه الاولي من الاوامر𖤐", callback_data="cbadmin"),
+                    InlineKeyboardButton("𖤐القائمه التانيه من الاومر𖤐", callback_data="cbsudo"),
                 ],[
-                    InlineKeyboardButton("📚 Basic Cmd", callback_data="cbbasic")
+                    InlineKeyboardButton("𖤐القائمه التاله من الاوامر𖤐", callback_data="cbbasic")
                 ],[
-                    InlineKeyboardButton("🔙 Go Back", callback_data="cbstart")
+                    InlineKeyboardButton("𖤐رجوع𖤐", callback_data="cbstart")
                 ],
             ]
         ),
@@ -103,7 +103,7 @@ async def cbcmds(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbbasic"))
 async def cbbasic(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""🏮 here is the basic commands:
+        f"""𖤐 هـــنــا قـــائمــه الاومـــر الـــاســـاسيــه𖤐:
 
 » /mplay (song name/link) - play music on video chat
 » /stream (query/link) - stream the yt live/radio live music
@@ -119,9 +119,9 @@ async def cbbasic(_, query: CallbackQuery):
 » /uptime - show the bot uptime status
 » /alive - show the bot alive info (in group)
 
-⚡️ __Powered by {BOT_NAME} AI__""",
+⚡️ __مــدعـــوم مــن {BOT_NAME} AI__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("🔙 Go Back", callback_data="cbcmds")]]
+            [[InlineKeyboardButton("𖤐رجـــوع𖤐", callback_data="cbcmds")]]
         ),
     )
 
@@ -129,7 +129,7 @@ async def cbbasic(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbadmin"))
 async def cbadmin(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""🏮 here is the admin commands:
+        f"""𖤐 هـــنــا قـــائمــه الاومـــر الـــاســـاسيــه𖤐:
 
 » /pause - pause the stream
 » /resume - resume the stream
@@ -144,14 +144,14 @@ async def cbadmin(_, query: CallbackQuery):
 
 ⚡️ __Powered by {BOT_NAME} AI__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("🔙 Go Back", callback_data="cbcmds")]]
+            [[InlineKeyboardButton("𖤐رجـــوع𖤐", callback_data="cbcmds")]]
         ),
     )
 
 @Client.on_callback_query(filters.regex("cbsudo"))
 async def cbsudo(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""🏮 here is the sudo commands:
+        f"""𖤐 هـــنــا قـــائمــه الاومـــر الـــاســـاسيــه𖤐:
 
 » /rmw - clean all raw files
 » /rmd - clean all downloaded files
@@ -162,7 +162,7 @@ async def cbsudo(_, query: CallbackQuery):
 
 ⚡ __Powered by {BOT_NAME} AI__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("🔙 Go Back", callback_data="cbcmds")]]
+            [[InlineKeyboardButton("𖤐رجـــوع𖤐", callback_data="cbcmds")]]
         ),
     )
 
