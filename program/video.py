@@ -63,8 +63,8 @@ async def vplay(c: Client, m: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(text="• Mᴇɴᴜ", callback_data="cbmenu"),
-                InlineKeyboardButton(text="• Cʟᴏsᴇ", callback_data="cls"),
+                InlineKeyboardButton(text="لتحكم في التشغيل", callback_data="cbmenu"),
+                InlineKeyboardButton(text="الغاء", callback_data="cls"),
             ]
         ]
     )
@@ -313,7 +313,7 @@ async def vstream(c: Client, m: Message):
     a = await c.get_chat_member(chat_id, aing.id)
     if a.status != "administrator":
         await m.reply_text(
-            f"💡 To use me, I need to be an **Administrator** with the following **permissions**:\n\n» ❌ __Delete messages__\n» ❌ __Add users__\n» ❌ __Manage video chat__\n\nData is **updated** automatically after you **promote me**"
+            f"قم برفعي مشرف كامل❤️ **Administrator** with the following **permissions**:\n\n» ❌ __Delete messages__\n» ❌ __Add users__\n» ❌ __Manage video chat__\n\nData is **updated** automatically after you **promote me**"
         )
         return
     if not a.can_manage_voice_chats:
