@@ -45,6 +45,6 @@ async def cleanup(_, message: Message):
     if ls_dir:
         for dta in os.listdir(pth):
             os.system("rm -rf *.raw *.jpg")
-        await message.reply_text("✅ **cleaned**")
+        await message.reply_text("✅ **تنظيف**")
     else:
-        await message.reply_text("✅ **already cleaned**")
+        await message.reply_text("✅ **تم تنظيفها بالفعل**")
