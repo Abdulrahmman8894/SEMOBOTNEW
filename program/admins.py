@@ -89,7 +89,7 @@ async def skip(client, m: Message):
 
 
 @Client.on_message(
-    command(["stop", f"stop@{BOT_USERNAME}", "end", f"end@{BOT_USERNAME}", "vstop"])
+    command(["stop", f"stop@{BOT_USERNAME}", "end", "اسكت", f"end@{BOT_USERNAME}", "vstop", "اسكت",])
     & other_filters
 )
 @authorized_users_only
@@ -99,11 +99,11 @@ async def stop(client, m: Message):
         try:
             await call_py.leave_group_call(chat_id)
             clear_queue(chat_id)
-            await m.reply("✅ **streaming has ended.**")
+            await m.reply("𖤐 **تــم ايــقــاف الــبــوت.𖤐**")
         except Exception as e:
-            await m.reply(f"🚫 **error:**\n\n`{e}`")
+            await m.reply(f"🚫 **خطا:**\n\n`{e}`")
     else:
-        await m.reply("❌ **nothing in streaming**")
+        await m.reply("❌ **لا شيئ مشغل**")
 
 
 @Client.on_message(
