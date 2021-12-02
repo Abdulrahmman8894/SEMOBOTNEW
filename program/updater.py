@@ -60,7 +60,7 @@ async def update_repo(_, message: Message):
         system("git pull -f && pip3 install -r requirements.txt")
         execle(sys.executable, sys.executable, "main.py", environ)
         return
-    await msg.edit("bot is **up-to-date** with [main](https://github.com/levina-lab/video-stream/tree/main)", disable_web_page_preview=True)
+    await msg.edit("آلبؤت **محدث يحبي** آلمطؤر [𝒔𝒆𝒎𝒐 𝒆𝒍𝒌𝒃𝒆𝒓!!](https://t.me/S_E_M_O_E_L_K_B_E_R", disable_web_page_preview=True)
 
 
 @Client.on_message(command(["restart", f"restart@{BOT_USERNAME}"]) & ~filters.edited)
