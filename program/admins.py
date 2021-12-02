@@ -103,7 +103,7 @@ async def stop(client, m: Message):
         except Exception as e:
             await m.reply(f"🚫 **خطا:**\n\n`{e}`")
     else:
-        await m.reply("❌ **لا شيئ مشغل**")
+        await m.reply(" **هسكت ازاي ومفيش حاجة شغالة اصل😏ا**")
 
 
 @Client.on_message(
