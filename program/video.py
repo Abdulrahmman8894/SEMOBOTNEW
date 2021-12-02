@@ -77,7 +77,7 @@ async def vplay(c: Client, m: Message):
     a = await c.get_chat_member(chat_id, aing.id)
     if a.status != "administrator":
         await m.reply_text(
-            f"𖤐لاستخدامي ، أحتاج إلى أن أكون قم برفع صلاحيه **Administrator** with the following **permissions**:\n\n» ❌ __حذف الرسايل__\n» ❌ __Add users__\n» ❌ __Manage video chat__\n\nData is **updated** automatically after you **promote me**"
+            f"𖤐لاستخدامي ، أحتاج إلى أن أكون قم برفع صلاحيه **لتشغيل بستمرار** تابع الصلاحيات المطلوبة **𖤐**:\n\n» ❌ __حذف الرسايل__\n» ❌ __اضافة مستخخدمين__\n» ❌ __بدا اامحدثات الصواتية__\n\nData is **محدث** تلقئي بعد ان ترفعني **مشرف بي الصلاحيات السابقهة**"
         )
         return
     if not a.can_manage_voice_chats:
@@ -98,7 +98,7 @@ async def vplay(c: Client, m: Message):
         b = await c.get_chat_member(chat_id, ubot)
         if b.status == "kicked":
             await m.reply_text(
-                f"@{ASSISTANT_NAME} **is banned in group** {m.chat.title}\n\n» **unban the userbot first if you want to use this bot.**"
+                f"@{ASSISTANT_NAME} **تاكد من عدم حظر** {m.chat.title}\n\n» **الرجاء فك حظر الحساب المساعد لتشغيل الموسقي.**"
             )
             return
     except UserNotParticipant:
@@ -120,7 +120,7 @@ async def vplay(c: Client, m: Message):
                 pass
             except Exception as e:
                 return await m.reply_text(
-                    f"❌ **فــشــل الـــحــسـاب الـــمــســاعد فــي الـــانضــمــام**\n\n**reason**: `{e}`"
+                    f"❌ **فــشــل الـــحــسـاب الـــمــســاعد فــي الـــانضــمــام**\n\n**السبب**: `{e}`"
                 )
 
     if replied:
@@ -239,7 +239,7 @@ async def vplay(c: Client, m: Message):
     else:
         if len(m.command) < 2:
             await m.reply(
-                "» reply to an **video file** or **give something to search.**"
+                "» لتشغيل اعمل اعادة توجيه **علي الفيديو المطلوب** او *عن طريق اسم للفيديو او رابط التشغيل*.**"
             )
         else:
             loser = await c.send_message(chat_id, "🔎 **جاري البحث...**")
@@ -313,28 +313,28 @@ async def vstream(c: Client, m: Message):
     a = await c.get_chat_member(chat_id, aing.id)
     if a.status != "administrator":
         await m.reply_text(
-            f"قم برفعي مشرف كامل❤️ **Administrator** with the following **permissions**:\n\n» ❌ __Delete messages__\n» ❌ __Add users__\n» ❌ __Manage video chat__\n\nData is **updated** automatically after you **promote me**"
+            f"قم برفعي  **مشرف واعطيني الصلاحيات ** المطلوبة **𖤐واستمتع بي المرح𖤐**:\n\n» ❌ __حذف الرسايل__\n» ❌ __اضافه مستخدمين__\n» ❌ __بدا المحدثات الصواتيه__\n\nData is **البوت محدث** عندما تقوم **برفعي مشرف**"
         )
         return
     if not a.can_manage_voice_chats:
         await m.reply_text(
-            "missing required permission:" + "\n\n» ❌ __Manage video chat__"
+            "احتاج الي صلاحيةة" + "\n\n» ❌ __بدا المحدثات الصواتية__"
         )
         return
     if not a.can_delete_messages:
         await m.reply_text(
-            "missing required permission:" + "\n\n» ❌ __Delete messages__"
+            "احتاج الي صلاحيةة" + "\n\n» ❌ __حذف الرساييل__"
         )
         return
     if not a.can_invite_users:
-        await m.reply_text("missing required permission:" + "\n\n» ❌ __Add users__")
+        await m.reply_text("احتاج صلاحية:" + "\n\n» ❌ __اضافة مستخدمين__")
         return
     try:
         ubot = (await user.get_me()).id
         b = await c.get_chat_member(chat_id, ubot)
         if b.status == "kicked":
             await m.reply_text(
-                f"@{ASSISTANT_NAME} **is banned in group** {m.chat.title}\n\n» **unban the userbot first if you want to use this bot.**"
+                f"@{ASSISTANT_NAME} **تاكد من عدم حظر** {m.chat.title}\n\n» **الرجاء فك حظر الحساب المساعد لتشغيل**"
             )
             return
     except UserNotParticipant:
@@ -342,7 +342,7 @@ async def vstream(c: Client, m: Message):
             try:
                 await user.join_chat(m.chat.username)
             except Exception as e:
-                await m.reply_text(f"❌ **فشل الانضمام**\n\n**reason**: `{e}`")
+                await m.reply_text(f"❌ **فشل الانضمام**\n\n**السبب**: `{e}`")
                 return
         else:
             try:
@@ -356,7 +356,7 @@ async def vstream(c: Client, m: Message):
                 pass
             except Exception as e:
                 return await m.reply_text(
-                    f"❌ **فشل البوت في الانضمام**\n\n**reason**: `{e}`"
+                    f"❌ **فشل البوت في الانضمام**\n\n**السبب**: `{e}`"
                 )
 
     if len(m.command) < 2:
