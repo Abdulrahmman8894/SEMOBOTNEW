@@ -68,7 +68,7 @@ async def start_(client: Client, message: Message):
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
-                [InlineKeyboardButton("❓ دلــيـل الاســاســي", callback_data="cbhowtouse")],
+                [InlineKeyboardButton(" 𖤐دلــيـل الاســاســي𖤐", callback_data="cbhowtouse")],
                 [
                     InlineKeyboardButton("𖤐الاومر𖤐", callback_data="cbcmds"),
                     InlineKeyboardButton("𖤐الـــمــطــور𖤐", url=f"https://t.me/{OWNER_NAME}"),
@@ -111,7 +111,7 @@ async def alive(client: Client, message: Message):
         ]
     )
 
-    alive = f"**Hello {message.from_user.mention()}, i'm {BOT_NAME}**\n\n✨ Bot is working normally\n🍀 My Master: [{ALIVE_NAME}](https://t.me/{OWNER_NAME})\n✨ Bot Version: `v{__version__}`\n🍀 Pyrogram Version: `{pyrover}`\n✨ Python Version: `{__python_version__}`\n🍀 PyTgCalls version: `{pytover.__version__}`\n✨ Uptime Status: `{uptime}`\n\n**Thanks for Adding me here, for playing video & music on your Group's video chat** ❤"
+    alive = f"**نـــورت {message.from_user.mention()}, انـــا {BOT_NAME}**\n\n𖤐 يـــعـــمــل الــبـــوت بــشـــكـــل طـــبــيــعــي\nاســـتــاذ: [{ALIVE_NAME}](https://t.me/{OWNER_NAME})\n𖤐 نسخه البوت: `v{__version__}`\n𖤐 نــســخــه بــوتـــجــرم: `{pyrover}`\n𖤐نسسخه بايثون: `{__python_version__}`\n🍀 بــوت ممتاذ: `{pytover.__version__}`\n✨ حالهة البوت: `{uptime}`\n\n**شكرًا لإضافتي هنا ، لتشغيل الفيديو والموسيقى على دردشة الفيديو الخاصة بمجموعتك** ❤"
 
     await message.reply_photo(
         photo=f"{ALIVE_IMG}",
@@ -148,7 +148,7 @@ async def new_chat(c: Client, m: Message):
         if member.id == bot_id:
             return await m.reply(
                 "𖤐 **شكرا لإضافتي إلى المجموعة !𖤐**\n\n"
-                "**Promote me as administrator of the Group, otherwise I will not be able to work properly, and don't forget to type /userbotjoin for invite the assistant.**\n\n"
+                "**انـنا بــوت لتــشــغـيل الموسيقي والفديوهات في المحادثه الصواتية لانضمام الحساب المساعد قم بكتابه /userbotjoin وسسوف ينضم تلقائي قناه السورس @SE_MO_1.**\n\n"
                 "**Once done, type** /reload",
                 reply_markup=InlineKeyboardMarkup(
                     [
