@@ -93,7 +93,6 @@ async def play(c: Client, m: Message):
         if b.status == "kicked":
             await m.reply_text(
                 f"@{ASSISTANT_NAME} **تاكد من عدم حظر** {m.chat.title}\n\n» **فك الحظر عن الحشاب المساعد وقم باضفتو لتقوم بي التشغيل**"
-.**"
             )
             return
     except UserNotParticipant:
