@@ -63,7 +63,7 @@ async def play(c: Client, m: Message):
         ]
     )
     if m.sender_chat:
-        return await m.reply_text("مشرف مجهول__'انتا__ !\n\n» العودة إلى حساب المستخدم من حقوق المسؤول. المحاولة")
+        return await m.reply_text("you're an __Anonymous Admin__ !\n\n» revert back to user account from admin rights.")
     try:
         aing = await c.get_me()
     except Exception as e:
