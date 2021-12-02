@@ -57,13 +57,13 @@ async def play(c: Client, m: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(text="• 𖤐قـائمه التحكم في التشغيل𖤐", callback_data="cbmenu"),
+                InlineKeyboardButton(text="• 𖤐قـائمه التحكم𖤐", callback_data="cbmenu"),
                 InlineKeyboardButton(text="• 𖤐الــغــاء𖤐", callback_data="cls"),
             ]
         ]
     )
     if m.sender_chat:
-        return await m.reply_text("you're an __Anonymous Admin__ !\n\n» revert back to user account from admin rights.")
+        return await m.reply_text("قم برفعي " __مشرف__ !\n\n» العوده الي حساب المسوال.")
     try:
         aing = await c.get_me()
     except Exception as e:
@@ -71,28 +71,29 @@ async def play(c: Client, m: Message):
     a = await c.get_chat_member(chat_id, aing.id)
     if a.status != "administrator":
         await m.reply_text(
-            f" قم برفعي مشرف كامل ومتقلقش❤️ **Administrator** with the following **permissions**:\n\n» ❌ __Delete messages__\n» ❌ __Add users__\n» ❌ __Manage video chat__\n\nData is **updated** automatically after you **promote me**"
+            f" قم برفعي❤️ **ادمن**بي الصلاحيات المطلوبة**المطلوب**:\n\n» ❌ __حذف الرسايل__\n» ❌ __اضافة مستخدمين__\n» ❌ __بدا المحدثات الصواتيه__\n\nData is **updated** automatically after you **promote me**"
         )
         return
     if not a.can_manage_voice_chats:
         await m.reply_text(
-            "missing required permission:" + "\n\n» ❌ __Manage video chat__"
+            "احتاج صلاحية" + "\n\n» ❌ __بدا درزشهة الفديو__"
         )
         return
     if not a.can_delete_messages:
         await m.reply_text(
-            "missing required permission:" + "\n\n» ❌ __Delete messages__"
+            "احتاج صلاحية" + "\n\n» ❌ __حذف الرسايل__"
         )
         return
     if not a.can_invite_users:
-        await m.reply_text("missing required permission:" + "\n\n» ❌ __Add users__")
+        await m.reply_text("احتاج صلاحيةة" + "\n\n» ❌ __اضافة مستخدمين__")
         return
     try:
         ubot = (await user.get_me()).id
         b = await c.get_chat_member(chat_id, ubot)
         if b.status == "kicked":
             await m.reply_text(
-                f"@{ASSISTANT_NAME} **is banned in group** {m.chat.title}\n\n» **unban the userbot first if you want to use this bot.**"
+                f"@{ASSISTANT_NAME} **تاكد من عدم حظر** {m.chat.title}\n\n» **فك الحظر عن الحشاب المساعد وقم باضفتو لتقوم بي التشغيل 
+.**"
             )
             return
     except UserNotParticipant:
@@ -100,7 +101,7 @@ async def play(c: Client, m: Message):
             try:
                 await user.join_chat(m.chat.username)
             except Exception as e:
-                await m.reply_text(f"❌ **فشل الحساب في الانضمام**\n\n**reason**: `{e}`")
+                await m.reply_text(f"❌ **فشل الحساب في الانضمام**\n\n**السبب**: `{e}`")
                 return
         else:
             try:
@@ -114,7 +115,7 @@ async def play(c: Client, m: Message):
                 pass
             except Exception as e:
                 return await m.reply_text(
-                    f"❌ **فشل انضمام الحساب المساعد**\n\n**reason**: `{e}`"
+                    f"❌ **فشل انضمام الحساب المساعد**\n\n**السبب**: `{e}`"
                 )
     if replied:
         if replied.audio or replied.voice:
@@ -286,21 +287,21 @@ async def stream(c: Client, m: Message):
     a = await c.get_chat_member(chat_id, aing.id)
     if a.status != "administrator":
         await m.reply_text(
-            f"قم برفعي مشرف كامل لتشغيل♬ **Administrator** with the following **permissions**:\n\n» ❌ __Delete messages__\n» ❌ __Add users__\n» ❌ __Manage video chat__\n\nData is **updated** automatically after you **promote me**"
+            f"قم برفعي مشرف كامل لتشغيل♬ **Administrator** اعطيني**صلاحيات**:\n\n» ❌ __حذف الرسايل__\n» ❌ _اضافه مستخدمين__\n» ❌ __ادرهة دردشه الفديو __\n\nData is **محدث** تلقائي بعد **رفعي مشرف**"
         )
         return
     if not a.can_manage_voice_chats:
         await m.reply_text(
-            "missing required permission:" + "\n\n» ❌ __Manage video chat__"
+            "احتاج صلاحية:" + "\n\n» ❌ __اداره دردشه الفديو__"
         )
         return
     if not a.can_delete_messages:
         await m.reply_text(
-            "missing required permission:" + "\n\n» ❌ __Delete messages__"
+            "mثاحتاج صلاحية:" + "\n\n» ❌ __حذفف الرسايل__"
         )
         return
     if not a.can_invite_users:
-        await m.reply_text("missing required permission:" + "\n\n» ❌ __Add users__")
+        await m.reply_text("احتاج صلاحيةة:" + "\n\n» ❌ __اضافة مستخدمين__")
         return
     try:
         ubot = (await user.get_me()).id
